@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advortex - Космическая Элегантность</title>
+    <meta name="description" content="Минималистичный космический визуал Advortex. Чистота, элегантность, изысканность.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">⟁</div>
+                <span class="logo-text">ADVORTEX</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Меню" id="menuToggle">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#visualization" class="nav-link">Визуализация</a></li>
+                <li><a href="#principles" class="nav-link">Принципы</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой секция -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Космическая <span class="gradient-text">Элегантность</span></h1>
+                    <p class="hero-subtitle">Минималистичный визуал для нового измерения рекламы</p>
+                    <p class="hero-description">Advortex объединяет чистоту дизайна с космической изысканностью, создавая непревзойденный опыт взаимодействия.</p>
+                    <div class="hero-buttons">
+                        <a href="#visualization" class="btn btn-primary">Исследовать</a>
+                        <a href="#about" class="btn btn-secondary">Узнать больше</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="cosmic-scene" id="cosmicScene">
+                        <!-- Звездное поле -->
+                        <div class="starfield" id="starfield"></div>
+                        
+                        <!-- Созвездия -->
+                        <div class="constellations">
+                            <div class="constellation" style="top: 15%; left: 20%;">
+                                <div class="star" style="top: 0; left: 0;"></div>
+                                <div class="star" style="top: 30px; left: 40px;"></div>
+                                <div class="star" style="top: 60px; left: 0;"></div>
+                                <div class="constellation-line line-1"></div>
+                                <div class="constellation-line line-2"></div>
+                            </div>
+                            <div class="constellation" style="top: 40%; left: 70%;">
+                                <div class="star" style="top: 0; left: 0;"></div>
+                                <div class="star" style="top: 20px; left: 35px;"></div>
+                                <div class="star" style="top: 40px; left: 0;"></div>
+                                <div class="star" style="top: 60px; left: -20px;"></div>
+                                <div class="star" style="top: 20px; left: -40px;"></div>
+                                <div class="constellation-line line-1"></div>
+                                <div class="constellation-line line-2"></div>
+                                <div class="constellation-line line-3"></div>
+                                <div class="constellation-line line-4"></div>
+                            </div>
+                            <div class="constellation target-constellation" style="top: 70%; left: 30%;">
+                                <div class="star" style="top: 0; left: 0;"></div>
+                                <div class="star" style="top: 0; left: 40px;"></div>
+                                <div class="star" style="top: 35px; left: 20px;"></div>
+                                <div class="star" style="top: -35px; left: 20px;"></div>
+                                <div class="constellation-line line-1"></div>
+                                <div class="constellation-line line-2"></div>
+                                <div class="constellation-line line-3"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Гироскоп/вихрь -->
+                        <div class="vortex-container">
+                            <div class="vortex">
+                                <div class="ring ring-1"></div>
+                                <div class="ring ring-2"></div>
+                                <div class="ring ring-3"></div>
+                                <div class="vortex-core"></div>
+                            </div>
+                            
+                            <!-- Потоки данных -->
+                            <div class="data-stream left-stream">
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                            </div>
+                            <div class="data-stream right-stream">
+                                <div class="beam"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Туманность -->
+                        <div class="nebula"></div>
+                    </div>
+                    
+                    <div class="visual-controls">
+                        <button class="control-btn" id="rotateToggle">
+                            <i class="fas fa-play" id="rotateIcon"></i>
+                            <span id="rotateText">Вращение</span>
+                        </button>
+                        <button class="control-btn" id="glowToggle">
+                            <i class="fas fa-lightbulb" id="glowIcon"></i>
+                            <span id="glowText">Свечение</span>
+                        </button>
+                        <button class="control-btn" id="starsToggle">
+                            <i class="fas fa-star" id="starsIcon"></i>
+                            <span id="starsText">Звезды</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О нас -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Философия <span class="gradient-text">Advortex</span></h2>
+                    <p class="section-subtitle">Где минимализм встречается с космической изысканностью</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3 class="about-card-title">Космическая Элегантность</h3>
+                        <p class="about-card-text">Чистые линии и безграничное пространство создают ощущение спокойной уверенности и изысканности.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h3 class="about-card-title">Интеллектуальная Простота</h3>
+                        <p class="about-card-text">Каждый элемент тщательно отобран для достижения максимального эффекта минимальными средствами.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 class="about-card-title">Бесконечные Возможности</h3>
+                        <p class="about-card-text">Как космос, наши решения расширяют границы и открывают новые измерения для брендов.</p>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Минимализм в Космическом Контексте</h3>
+                        <p>Advortex переосмысливает рекламный визуал через призму космической эстетики. Мы верим, что настоящая изысканность — в умении убрать лишнее, оставив только суть.</p>
+                        <p>Наш подход сочетает математическую точность гироскопа с поэтической красотой звездного неба, создавая уникальный визуальный язык для современных брендов.</p>
+                        <a href="#contact" class="btn btn-outline">Связаться с нами</a>
+                    </div>
+                    <div class="about-visual">
+                        <div class="visual-placeholder">
+                            <div class="mini-vortex">
+                                <div class="mini-ring"></div>
+                                <div class="mini-ring"></div>
+                                <div class="mini-ring"></div>
+                            </div>
+                            <div class="mini-stars">
+                                <div class="mini-star"></div>
+                                <div class="mini-star"></div>
+                                <div class="mini-star"></div>
+                                <div class="mini-star"></div>
+                                <div class="mini-star"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Визуализация -->
+        <section class="section visualization-section dark-section" id="visualization">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Интерактивный <span class="gradient-text">Визуал</span></h2>
+                    <p class="section-subtitle">Исследуйте космическую эстетику Advortex</p>
+                </div>
+                
+                <div class="visualization-container">
+                    <div class="viz-controls">
+                        <div class="control-group">
+                            <label for="rotationSpeed">Скорость вращения</label>
+                            <input type="range" id="rotationSpeed" min="0" max="10" value="3">
+                            <span id="speedValue">3</span>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="glowIntensity">Интенсивность свечения</label>
+                            <input type="range" id="glowIntensity" min="1" max="10" value="5">
+                            <span id="glowValue">5</span>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="starDensity">Плотность звезд</label>
+                            <input type="range" id="starDensity" min="50" max="300" value="150">
+                            <span id="densityValue">150</span>
+                        </div>
+                        
+                        <div class="color-controls">
+                            <h4>Цветовая палитра</h4>
+                            <div class="color-options">
+                                <button class="color-option active" data-color="#88ffff" style="background-color: #88ffff;"></button>
+                                <button class="color-option" data-color="#ff88ff" style="background-color: #ff88ff;"></button>
+                                <button class="color-option" data-color="#ffff88" style="background-color: #ffff88;"></button>
+                                <button class="color-option" data-color="#88ff88" style="background-color: #88ff88;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="viz-display">
+                        <div class="viz-scene" id="vizScene">
+                            <!-- Сюда будет вставлена интерактивная сцена -->
+                        </div>
+                        <div class="viz-info">
+                            <h4>Космический Гироскоп</h4>
+                            <p>Три вращающихся кольца символизируют гармонию, баланс и бесконечное движение. Мягкое голубое свечение в центре представляет ядро инноваций Advortex.</p>
+                            <div class="viz-stats">
+                                <div class="stat">
+                                    <span class="stat-value" id="rotationStat">3.0</span>
+                                    <span class="stat-label">Скорость вращения</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" id="glowStat">50%</span>
+                                    <span class="stat-label">Интенсивность свечения</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" id="starsStat">150</span>
+                                    <span class="stat-label">Количество звезд</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Принципы -->
+        <section class="section principles-section" id="principles">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Принципы <span class="gradient-text">Дизайна</span></h2>
+                    <p class="section-subtitle">Основы космического минимализма</p>
+                </div>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-number">01</div>
+                        <h3 class="principle-title">Чистота и порядок</h3>
+                        <p class="principle-text">Как звезды на ночном небе, каждый элемент занимает свое идеальное место. Ничего лишнего, только гармония.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">02</div>
+                        <h3 class="principle-title">Глубина перспективы</h3>
+                        <p class="principle-text">Создание ощущения бесконечного пространства, где вихрь Advortex становится центром вселенной бренда.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">03</div>
+                        <h3 class="principle-title">Акцентное свечение</h3>
+                        <p class="principle-text">Единственный цветовой акцент в монохромной палитре — голубое свечение, символизирующее инновации и ясность.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-number">04</div>
+                        <h3 class="principle-title">Уравновешенное движение</h3>
+                        <p class="principle-text">Медленное, плавное вращение, которое не отвлекает, а завораживает, создавая медитативный опыт.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section class="section contact-section dark-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Свяжитесь с <span class="gradient-text">нами</span></h2>
+                    <p class="section-subtitle">Готовы исследовать космические возможности для вашего бренда?</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Наша миссия</h4>
+                            <p>Преобразовать рекламный ландшафт через минималистичную космическую эстетику.</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-satellite"></i>
+                            </div>
+                            <h4>Связь с нами</h4>
+                            <p>hello@advortex.com<br>+7 (999) 123-45-67</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Мы в сети</h4>
+                            <div class="social-links">
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Компания</label>
+                            <input type="text" id="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Отправить в космос <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">⟁</div>
+                        <span class="logo-text">ADVORTEX</span>
+                    </a>
+                    <p class="footer-tagline">Космическая элегантность в рекламе</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h5>Навигация</h5>
+                        <ul>
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#visualization">Визуализация</a></li>
+                            <li><a href="#principles">Принципы</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h5>Ресурсы</h5>
+                        <ul>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Галерея</a></li>
+                            <li><a href="#">Документация</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h5>Правовая информация</h5>
+                        <ul>
+                            <li><a href="#">Конфиденциальность</a></li>
+                            <li><a href="#">Условия использования</a></li>
+                            <li><a href="#">Политика cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Advortex. Все права защищены. Космическая элегантность.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Русский</a>
+                    <a href="#">English</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
